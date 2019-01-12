@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>注册</h1>
+<div>
+  <input type="text" id="user">
+</div>
+<div>
+  <input type="text" id="pass">
+</div>
+<button type="button" id="btn1">注册</button>
+<button type="button" id="btn2">登录</button>
+<script src="jquery-3.3.1.js"></script>
+<script>
+  $('#btn1').click(function () {
+    $.ajax({
+      type: 'get',
+      url: '/reg',
+      data:{user: $('#user').val(), pass: $('#pass').val()},
+      dataType: 'json',
+      success: function (res) {
+        if(res.err){
+          alert('err ' + res.msg)
+        } else {
+          console.log(res)
+        }
+        console.log(res)
+      },
+      error:function (err) {
+        console.log(err)
+      }
+    })
+  })
+  $('#btn2').click(function () {
+    $.ajax({
+      type: 'get',
+      url: '/login',
+      data:{user: $('#user').val(), pass: $('#pass').val()},
+      dataType: 'json',
+      success: function (res) {
+        if(res.err){
+          alert('err ' + res.msg)
+        } else {
+          console.log(res)
+        }
+        console.log(res)
+      },
+      error:function (err) {
+        console.log(err)
+      }
+    })
+  })
+</script>
+</body>
+</html>

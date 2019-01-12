@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="请输入..." name="user">
+<div id="par"></div>
+<button id="btn">内容插入</button>
+<script>
+  var par = document.getElementById('par');
+  var input = document.getElementsByName('user')[0];
+  var html = [];
+  document.getElementById('btn').onclick=function () {
+    html[html.length] = '<h1>'+input.value+'</h1>';
+    par.innerHTML = html.join('')
+  }
+</script>
+</body>
+</html>

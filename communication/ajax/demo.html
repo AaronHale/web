@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    window.onload = function () {
+      let oBtn = document.getElementById('btn1');
+      oBtn.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        /*if (window.XMLHttpRequest) {
+          var xhr = new XMLHttpRequest();
+        } else {
+          var xhr = new ActiveXObject('Microsoft.XMLHttp');
+        }*/
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState === 4 && shr.status === 200) {
+            console.log(xhr.responseText);
+            console.log('100 消息')
+            console.log('200 成功')
+            console.log('300 重定向')
+              console.log('301 永久重定向')
+              console.log('302 临时重定向')
+              console.log('304 重定向')
+            console.log('400 客户端请求错误')
+            console.log('400 服务端错误')
+            console.log('600 自定义的错误')
+          } else {
+            console.log(xhr.error)
+          }
+        };
+        xhr.open('get','a.php',true); // true 异步 false 同步
+        xhr.send();
+      }
+
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

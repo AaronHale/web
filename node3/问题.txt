@@ -1,0 +1,79 @@
+老师，用户登录，怎么能像咱们开课吧这个，重复登录，把上一次登录的用户，给挤下去呢
+
+老师上课搜集的好的问题，可否不删掉，客户也一起作为笔记给我们？
+
+同学说到单点登录,,,能解释下什么意思吗??
+OAuth
+
+老师能讲讲 restful api 不
+
+restful不是接口、也不是标准，风格、习惯
+
+method url
+get    /user        登陆
+post   /user        注册
+delete /user        注销
+
+
+content-type有哪些类型，各是什么意思呢？
+
+text/plain                              纯文本                       用不着
+application/x-www-form-urlencoded       &&&的方式                    简单数据
+multipart/form-data                     定界符分割各个数据(文件上传)   上传文件
+
+如果是中文呢？？？
+
+
+
+urlencoded=>url编码
+
+名字=值&名字=值&名字=值
+
+
+
+xml怎么解析的啊
+xml.getElementsByTagName('person')[0]
+
+
+
+老师，node什么情况下需要配置环境变量，该怎么配呢
+版本、数据库
+
+
+
+处理并发吗；Nodejs 有必要做多线程处理的方案
+nodejs和JS一样的单线程、单进程
+非阻塞异步交互
+
+
+老师，我有一个问题，现在我们公司里面也是用nodeJS作为中间层服务器，我想问为啥传统前端直接可以直接请求后台java或者php的接口，它还要用node作为中间层，这样的好处是什么？
+安全性、性能、前台交互
+
+
+这回调函数的执行过程是怎么样的？
+socket.on('data', function (){
+  req=解析请求;
+  res=socket;
+
+  cb(req, res);
+});
+
+
+NVM
+
+打印的东西出来了两次?
+
+能否 简单说说 “爬虫”——抓取别人网站的数据
+
+
+负载均衡是啥——架构师
+
+
+
+process.env.NODE_ENV 老师有空可以讲讲这个吗
+
+
+
+老师node怎么代理跨域啊——反向代理
+
+老师 Node 只能用单cpu 是不是也是缺点啊——多进程
