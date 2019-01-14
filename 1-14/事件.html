@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<button ondblclick="alert('666')">点击</button>
+<h1>一级标题</h1>
+<p>段落标签</p>
+<div>段落标题2</div>
+<script>
+  //封装函数获取元素节点
+  function $(tagName) {
+    //获取元素节点
+    var elem = document.getElementsByTagName(tagName)[0]
+    return elem
+  }
+
+  var h1 = $('h1')
+  h1.onclick = function () {
+    alert('h1被点击')
+  }
+  //事件传递
+  var p = $('p')
+  var div = $('div')
+  p.addEventListener('click', function () {
+    alert('p元素被点击')
+  },true)
+  div.addEventListener('click', function () {
+    alert('div元素被点击')
+  })
+  document.body.addEventListener('click', function () {
+    alert('body被点击')
+  })
+  document.addEventListener('click', function () {
+    alert('document被点击')
+  },true)
+</script>
+</body>
+</html>

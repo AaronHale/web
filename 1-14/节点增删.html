@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  var div = document.createElement('div')
+  div.id = 'box'
+  div.innerHTML = '动态创建的div'
+  console.log(div)
+
+  //添加节点
+  document.body.appendChild(div)
+
+  var h1 = document.createElement('h1')
+  h1.innerHTML = '动态创建h1'
+  //插入到div之前 父节点.insertBefore(要插入的节点,在此节点前插入)
+  document.body.insertBefore(h1, div)
+  // 父节点.appendChild(被插入得节点)
+  //document.body.appendChild(h1) //创建一个节点，只能添加到一个位置
+  //移除
+  // 父节点.removeChild(被插入得节点)
+  //document.body.removeChild(div)
+</script>
+
+</body>
+</html>
