@@ -1,17 +1,19 @@
 {
-  "name": "web",
+  "name": "web全栈",
   "version": "1.0.0",
-  "description": "",
+  "description": "web全栈",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.4",
     "node-interactor": "^0.0.3",
     "supervisor": "^0.12.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "uuid": "^3.3.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "qlm",
   "license": "ISC"
 }

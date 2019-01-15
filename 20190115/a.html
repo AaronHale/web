@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      padding:0;
+      background: rgb(5,20,54);
+    }
+    .bg{
+      width:10px;
+      height:4px;
+      display: inline-block;
+      background: -webkit-linear-gradient(left,
+      transparent 0%, transparent 10%,
+      rgb(6,165,253) 10%, rgb(6,165,253) 20%,
+      transparent 20%,transparent 30%,
+      rgb(6,165,253) 30%,rgb(6,165,253) 40%,
+      transparent 40%, transparent 50%,
+      rgb(6,165,253) 50%,rgb(6,165,253) 60%,
+      transparent 60%, transparent 70%,
+      rgb(6,165,253) 70%, rgb(6,165,253) 80%,
+      transparent 80%, transparent 90%,
+      rgb(6,165,253) 90%, rgb(6,165,253) 100%
+      );
+      -webkit-transform:skewX(-45deg);
+    }
+    .W{
+      display: inline-block;
+      width:30px;
+      height:2px;
+    }
+  </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg W"></div>
+<div style="background-color:rgb(6,165,253);width:60px;height:1px; -webkit-transform:skewX(-45deg);"></div>
+</body>
+</html>
